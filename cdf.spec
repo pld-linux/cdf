@@ -1,12 +1,12 @@
 Summary:	cdf - "colorized df"
 Summary(pl):	cdf - "kolorowy df"
 Name:		cdf
-Version:	0.1
+Version:	0.2
 Release:	1
 License:	GPL v2+
 Group:		Utilities
-Source0:	http://bmp-plugins.berlios.de/misc/cdf/%{name}-%{version}.tar.gz
-# Source0-md5:	8591e101a9da0844c010804445091545
+Source0:	http://download.berlios.de/bmp-plugins/%{name}-%{version}.tar.gz
+# Source0-md5:	1afd130f6c562700e8ad05724c6e1a9d
 URL:		http://bmp-plugins.berlios.de/misc/cdf/cdf.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
