@@ -1,5 +1,5 @@
-Summary:	cdf means "colorized df"
-Summary(pl):	cdf to "kolorowy df"
+Summary:	cdf - "colorized df"
+Summary(pl):	cdf - "kolorowy df"
 Name:		cdf
 Version:	0.1
 Release:	1
