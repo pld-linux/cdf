@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		Utilities
 Source0:	http://bmp-plugins.berlios.de/misc/cdf/%{name}-%{version}.tar.gz
+# Source0-md5:	8591e101a9da0844c010804445091545
 URL:		http://bmp-plugins.berlios.de/misc/cdf/cdf.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
