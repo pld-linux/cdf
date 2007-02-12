@@ -1,5 +1,5 @@
 Summary:	cdf - "colorized df"
-Summary(pl):	cdf - "kolorowy df"
+Summary(pl.UTF-8):   cdf - "kolorowy df"
 Name:		cdf
 Version:	0.2
 Release:	1
@@ -17,11 +17,11 @@ cdf means "colorized df". The main features of cdf are:
 - most of such utils needs some 3rd party libraries, python
   interpreter and so on, while cdf written in pure C
 
-%description -l pl
-cdf oznacza "kolorowy df". G³ównymi cechami cdf s±:
-- schematy kolorów
-- przyjemne dla oka paski zape³nienia dysków
-- cdf jest napisany w czystym C, dziêki czemu nie wymaga ¿adnych
+%description -l pl.UTF-8
+cdf oznacza "kolorowy df". GÅ‚Ã³wnymi cechami cdf sÄ…:
+- schematy kolorÃ³w
+- przyjemne dla oka paski zapeÅ‚nienia dyskÃ³w
+- cdf jest napisany w czystym C, dziÄ™ki czemu nie wymaga Å¼adnych
   dodatkowych bibliotek
 
 %prep
