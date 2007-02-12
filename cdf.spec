@@ -1,5 +1,5 @@
 Summary:	cdf - "colorized df"
-Summary(pl.UTF-8):   cdf - "kolorowy df"
+Summary(pl.UTF-8):	cdf - "kolorowy df"
 Name:		cdf
 Version:	0.2
 Release:	1
