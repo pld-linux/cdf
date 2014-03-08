@@ -5,7 +5,7 @@ Version:	0.2
 Release:	1
 License:	GPL v2+
 Group:		Utilities
-Source0:	http://download.berlios.de/bmp-plugins/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/bmp-plugins.berlios/%{name}-%{version}.tar.gz
 # Source0-md5:	1afd130f6c562700e8ad05724c6e1a9d
 URL:		http://bmp-plugins.berlios.de/misc/cdf/cdf.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,4 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/cdf
