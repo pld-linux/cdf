@@ -1,0 +1,96 @@
+diff -urN cdf-0.2.orig/src/colors.c cdf-0.2/src/colors.c
+--- cdf-0.2.orig/src/colors.c	2026-05-20 18:22:35.820652904 +0200
++++ cdf-0.2/src/colors.c	2026-05-20 18:23:01.856222423 +0200
+@@ -27,6 +27,13 @@
+ #include "conf.h"
+ #include "common.h"
+ 
++char *bracket_color;
++char *gauge_color;
++char *header_color;
++char *fs_color;
++char *data_color;
++char *perc_color;
++
+ char *cl(const char *color)
+ {
+ 	if (!color) 
+diff -urN cdf-0.2.orig/src/colors.h cdf-0.2/src/colors.h
+--- cdf-0.2.orig/src/colors.h	2026-05-20 18:22:35.820689887 +0200
++++ cdf-0.2/src/colors.h	2026-05-20 18:22:43.756222423 +0200
+@@ -34,11 +34,11 @@
+ 
+ int  read_colors();
+ 
+-char *bracket_color;
+-char *gauge_color;
+-char *header_color;
+-char *fs_color;
+-char *data_color;
+-char *perc_color;
++extern char *bracket_color;
++extern char *gauge_color;
++extern char *header_color;
++extern char *fs_color;
++extern char *data_color;
++extern char *perc_color;
+ 
+ #endif
+diff -urN cdf-0.2.orig/src/common.h cdf-0.2/src/common.h
+--- cdf-0.2.orig/src/common.h	2026-05-20 18:22:35.820626022 +0200
++++ cdf-0.2/src/common.h	2026-05-20 18:22:39.346222423 +0200
+@@ -30,11 +30,11 @@
+ char *bar(unsigned short n);
+ void header();
+ 
+-double blocksize;
+-char bs_suff;
+-short human_readable;
++extern double blocksize;
++extern char bs_suff;
++extern short human_readable;
+ 
+-short show_pseudofs;
++extern short show_pseudofs;
+ 
+ char *expand_filename(char *str);
+ short is_pseudofs(const char *fs_type);
+diff -urN cdf-0.2.orig/src/hash.c cdf-0.2/src/hash.c
+--- cdf-0.2.orig/src/hash.c	2026-05-20 18:22:35.820799271 +0200
++++ cdf-0.2/src/hash.c	2026-05-20 18:23:08.709555757 +0200
+@@ -24,6 +24,8 @@
+ 
+ #include "hash.h"
+ 
++struct hash_t *hashtab[HASHSIZE];
++
+ unsigned hash(char *s)
+ {
+ 	unsigned hashval;
+diff -urN cdf-0.2.orig/src/hash.h cdf-0.2/src/hash.h
+--- cdf-0.2.orig/src/hash.h	2026-05-20 18:22:35.820826999 +0200
++++ cdf-0.2/src/hash.h	2026-05-20 18:22:47.292889090 +0200
+@@ -8,7 +8,7 @@
+ };
+ 
+ #define HASHSIZE 101
+-struct hash_t *hashtab[HASHSIZE];
++extern struct hash_t *hashtab[HASHSIZE];
+ 
+ unsigned hash(char *);
+ struct hash_t *lookup(char *);
+diff -urN cdf-0.2.orig/src/main.c cdf-0.2/src/main.c
+--- cdf-0.2.orig/src/main.c	2026-05-20 18:22:35.820503287 +0200
++++ cdf-0.2/src/main.c	2026-05-20 18:22:54.762889090 +0200
+@@ -31,6 +31,11 @@
+ #include "colors.h"
+ #include "conf.h"
+ 
++double blocksize;
++char bs_suff;
++short human_readable;
++short show_pseudofs;
++
+ static void show_help();
+ static void usage();
+ 

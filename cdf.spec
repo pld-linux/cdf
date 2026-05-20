@@ -2,11 +2,12 @@ Summary:	cdf - "colorized df"
 Summary(pl.UTF-8):	cdf - "kolorowy df"
 Name:		cdf
 Version:	0.2
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Utilities
 Source0:	http://downloads.sourceforge.net/bmp-plugins.berlios/%{name}-%{version}.tar.gz
 # Source0-md5:	1afd130f6c562700e8ad05724c6e1a9d
+Patch0:		%{name}-fno-common.patch
 URL:		http://bmp-plugins.berlios.de/misc/cdf/cdf.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,6 +27,7 @@ cdf oznacza "kolorowy df". Głównymi cechami cdf są:
 
 %prep
 %setup -q
+%patch -P0 -p1
 
 %build
 %configure
